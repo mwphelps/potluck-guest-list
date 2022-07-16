@@ -1,24 +1,15 @@
-// invite button
 const addGuestButton = document.querySelector('.invite');
-// label for the invite button
 const guestInputLabel = document.querySelector('.add-guest label');
-// text input box
 const guestInput = document.querySelector('.add-guest input');
-// unordered list (not yet visible)
 const guestList = document.querySelector('.guest-list');
-// span class for number of guests attending
 const guestCount = document.querySelector('.attendance');
-// alert when guest list is full (not yet visible)
 const guestFull = document.querySelector('.alert');
-// assign dishes button (not available until guestCount = 8)
 const assignButton = document.querySelector('.assign');
-// a list of the guest and their assigned dishes (not available until guestList is populated)
 const assignedItems = document.querySelector('.assigned-items');
 
 // code for adding people to list
 addGuestButton.addEventListener('click', function () {
   const guest = guestInput.value;
-  //console.log(guest);
   if (guest !== '') {
     addToList(guest);
     clearInput();
